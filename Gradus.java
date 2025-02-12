@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,7 +11,7 @@ public class Gradus {
         
         Float T = Float.parseFloat(input.readLine());
 
-        System.out.println("Calculated temperature in Farenheits: " + (T-32)*5/9);
+        System.out.println("Calculated temperature in Fahrenheit: " + (T * 9 / 5 + 32));
 
     }
 }
