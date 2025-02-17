@@ -9,9 +9,12 @@ public class Gradus {
 
         System.out.println("Please, enter temperature in Celsius: ");
         
-        Float T = Float.parseFloat(input.readLine());
+        int T = Integer.parseInt(input.readLine());
+
 
         System.out.println("Calculated temperature in Fahrenheit: " + (T * 9 / 5 + 32));
 
     }
 }
+
+
