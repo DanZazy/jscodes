@@ -1,3 +1,4 @@
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -9,6 +10,7 @@ public class Gradus {
 
         System.out.println("Please, enter temperature in Celsius: ");
         
+
         int T = Integer.parseInt(input.readLine());
 
 
@@ -16,5 +18,4 @@ public class Gradus {
 
     }
 }
-
 
