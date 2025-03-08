@@ -8,13 +8,12 @@ public class Task1 {
         System.out.print("Введіть значення c: ");
         double c = sc.nextDouble();
 
-        double h_a = 0.25 * c; // Крок зміни a
+        double h_a = 0.25 * c;
 
-        // Перебір значень a від c до 0 із кроком h_a
         for (double a = c; a >= 0; a += h_a) {
             double sinSquared = Math.pow(Math.sin(a), 2);
             
-            if (sinSquared > 0) { // Перевірка, щоб не було log(0) або log(від'ємного числа)
+            if (sinSquared > 0) {
                 double y = a / Math.log(sinSquared);
                 System.out.println("a: " + a + ", y: " + y);
             } else {
@@ -22,6 +21,6 @@ public class Task1 {
             }
         }
 
-        sc.close(); // Закриваємо сканер
+        sc.close();
     }
 }
