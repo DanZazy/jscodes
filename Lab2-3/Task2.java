@@ -8,7 +8,11 @@ public class Task2 {
         double x, y, b;
         double maxY, maxX;
 
+
+        System.out.print("Enter b value: \n");
+
         System.out.print("Enter b value: ");
+
         b = sc.nextDouble();
 
         x = 0;
@@ -23,7 +27,11 @@ public class Task2 {
                 maxX = x;
             }
 
+
+            System.out.println("\n x: " + x + "; b: " + b + "; y: " + y);
+
             System.out.println("x: " + x + "; b: " + b + "; y: " + y);
+
         }
 
         System.out.println("Максимальне значення y: " + maxY + " при x = " + maxX);
