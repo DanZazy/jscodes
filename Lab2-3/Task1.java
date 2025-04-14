@@ -29,7 +29,12 @@ public class Task1 {
             } else {
                 System.out.println("Error: d value is zero or negative.");
 
+            }
+        }
+
+
         for (a = c; a < 0; a += ha) { // Рухаємося до 0
+
             double denominator = Math.pow(Math.sin(a), 2);
             
             if (denominator > 0) { 
@@ -42,7 +47,8 @@ public class Task1 {
             if (a + ha >= 0) break;
 
         }
-        
         sc.close();
     }
 }
+ 
+
