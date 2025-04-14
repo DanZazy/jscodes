@@ -16,13 +16,13 @@ public class Arrays2 {
         int[][] Z = new int[n][m];
         ArrayList<Integer> K = new ArrayList<>();
 
-        System.out.println("Z mass: ");
+        System.out.println("Z mass: \n");
 
         for (int i = 0; i<n; i++) {
             for(int j=0; j<m; j++) {
                 Z[i][j] = (int) (Math.random()*10);
 
-                System.out.print(" "+Z[i][j]+"");
+                System.out.print(" "+Z[i][j]+" ");
                 K.add(Z[i][j]);
             }
             System.out.println();
