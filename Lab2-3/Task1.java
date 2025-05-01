@@ -5,6 +5,8 @@ public class Task1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        System.out.print("Enter c value (negative): \n");
+
         System.out.print("Enter c value (negative): ");
 
         double c = sc.nextDouble();
@@ -28,10 +30,13 @@ public class Task1 {
                 System.out.println("a: " + a + ", y: " + y);
             } else {
                 System.out.println("Error: d value is zero or negative.");
+
             }
         }
 
-        for (a = c; a < 0; a += ha) {
+
+        for (a = c; a < 0; a += ha) { // Рухаємося до 0
+
             double denominator = Math.pow(Math.sin(a), 2);
             
             if (denominator > 0) { 
