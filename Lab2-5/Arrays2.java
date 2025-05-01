@@ -2,9 +2,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.lang.Math;
 
-public class Arrays2 {
+public class Arrays2 {  
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Input N: ");
@@ -20,15 +19,14 @@ public class Arrays2 {
 
         for (int i = 0; i<n; i++) {
             for(int j=0; j<m; j++) {
-                Z[i][j] = (int) (Math.random()*10);
+            Z[i][j] = (int) (Math.random()*10);
 
-                System.out.print(" "+Z[i][j]+" ");
-                K.add(Z[i][j]);
-            }
-            System.out.println();
+            System.out.print(" "+Z[i][j]+" ");
+            K.add(Z[i][j]);
         }
+        System.out.println();
+    }
         
-
         int Lsum = 0;
         int Bsum = 0;
 
@@ -48,6 +46,9 @@ public class Arrays2 {
         System.out.println("Difference (Less - Greater): " + diff);
 
         sc.close();
-        
     }
 }
+
+
+    
+
