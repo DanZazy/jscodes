@@ -18,33 +18,29 @@ public class arr2 {
         Integer prevSign = null;
         int signChangeCount = 0;
 
-        // Заповнення масиву значеннями, введеними користувачем
+        // Заповнення масиву
         for (int i = 0; i < n; i++) {
             System.out.print("Введіть елемент " + (i + 1) + ": ");
             mass[i] = sc.nextInt();
 
-            int currentSign = Integer.compare(mass[i], 0);
-
-            if (prevSign != null && currentSign != 0 && currentSign != prevSign) {
-                signChangeCount++; // фіксуємо зміну знаку
-            }
-            
+            int currentSign = Integer.compare(mass[i], 0); // -1, 0 або 1
 
             if (currentSign != 0) {
-                prevSign = currentSign; // оновлюємо знак, якщо число не нуль
+                if (prevSign != null && currentSign != prevSign) {
+                    signChangeCount++;
+                }
+                prevSign = currentSign;
             }
         }
 
-        // Виведення елементів масиву
-        System.out.println("\n Елементи масиву:");
+        // Виведення результатів
+        System.out.println("\nЕлементи масиву:");
         for (int i = 0; i < n; i++) {
             System.out.println("Елемент " + (i + 1) + ": " + mass[i]);
         }
 
-        // Виведення кількості змін знаку
-        System.out.println("\n Кількість змін знаку: " + signChangeCount);
+        System.out.println("\nКількість змін знаку: " + signChangeCount);
 
         sc.close();
     }
 }
-
