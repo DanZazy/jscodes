@@ -2,33 +2,45 @@ import java.util.Scanner;
 
 public class arr2 {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
-    
         System.out.print("Введіть кількість елементів: ");
         int n = sc.nextInt();
 
-        System.out.println("Введіть послідовність ненульових цілих чисел: ");
-
         if (n <= 0) {
-            System.out.println("Послідовність має містити хоча б один елемент.");
+            System.out.println("Кількість повинна бути більше нуля.");
+            sc.close();
             return;
         }
 
+        int[] mass = new int[n];
+        Integer prevSign = null;
+        int signChangeCount = 0;
 
-        int prev = sc.nextInt();
-        int signChanges = 0;
+        // Заповнення масиву
+        for (int i = 0; i < n; i++) {
+            System.out.print("Введіть елемент " + (i + 1) + ": ");
+            mass[i] = sc.nextInt();
 
+            int currentSign = Integer.compare(mass[i], 0); // -1, 0 або 1
 
-        for (int i = 1; i < n; i++) {
-            int current = sc.nextInt();
-            if ((prev > 0 && current < 0) || (prev < 0 && current > 0)) {
-                signChanges++;
+            if (currentSign != 0) {
+                if (prevSign != null && currentSign != prevSign) {
+                    signChangeCount++;
+                }
+                prevSign = currentSign;
             }
-            prev = current;
         }
 
-        System.out.println("Кількість змін знака: " + signChanges);
+        // Виведення результатів
+        System.out.println("\nЕлементи масиву:");
+        for (int i = 0; i < n; i++) {
+            System.out.println("Елемент " + (i + 1) + ": " + mass[i]);
+        }
+
+        System.out.println("\nКількість змін знаку: " + signChangeCount);
+
+        sc.close();
     }
 }
-

@@ -11,6 +11,8 @@ public class Task1 {
 
         double c = sc.nextDouble();
         
+        sc.close();
+
         if (c >= 0) {
             System.out.println("Error: c must be negative.");
             return;
@@ -44,6 +46,7 @@ public class Task1 {
                 System.out.println("Error: Denominator is zero or negative.");
 
             }
+
             if (a + ha >= 0) break;
 
         }

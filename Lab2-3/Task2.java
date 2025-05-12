@@ -15,6 +15,8 @@ public class Task2 {
 
         b = sc.nextDouble();
 
+        sc.close();
+
         x = 0;
         maxY = Math.pow(x, 5) + b * x + Math.pow(b, 3);
         maxX = x;
@@ -36,6 +38,5 @@ public class Task2 {
 
         System.out.println("Максимальне значення y: " + maxY + " при x = " + maxX);
 
-        sc.close();
     }
 }
