@@ -16,6 +16,7 @@ public class Gradus {
 
         System.out.println("Calculated temperature in Fahrenheit: " + (T * 9 / 5 + 32));
 
+        input.close();
     }
 }
 

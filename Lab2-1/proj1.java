@@ -10,6 +10,8 @@ public class proj1 {
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
         String userName = input.readLine();
 
+        input.close();
+        
         int date = 2025;
         System.out.println("Скільки вам років?");
         int age = Integer.parseInt(input.readLine());
